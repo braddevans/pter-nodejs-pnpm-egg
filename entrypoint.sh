@@ -1,6 +1,13 @@
 #!/bin/bash
 cd /home/container
 
+if [ -z "$(ls -A /home/container)" ]; then
+   echo "Empty";
+   cp /tmpstore/container/. . -v;
+else
+   echo "Not Empty"
+fi
+
 node -v
 
 SHOULD_INSTALL=true
