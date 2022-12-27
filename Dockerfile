@@ -20,6 +20,4 @@ WORKDIR /home/container
 
 COPY ./entrypoint.sh /entrypoint.sh
 
-COPY container /tmpstore/container/
-
 CMD ["/bin/bash", "/entrypoint.sh"]

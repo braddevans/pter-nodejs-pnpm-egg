@@ -2,8 +2,9 @@
 cd /home/container
 
 if [ -z "$(ls -A /home/container)" ]; then
-   echo "Empty";
-   cp /tmpstore/container/. . -v;
+   echo "directory found to be Empty";
+   git clone https://github.com/braddevans/pter-nodejs-pnpm-egg.git /tmp/egg
+   cp /tmp/egg/contianer/* . -v
 else
    echo "Not Empty"
 fi
