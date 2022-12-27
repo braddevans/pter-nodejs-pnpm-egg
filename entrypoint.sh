@@ -46,7 +46,6 @@ function run_server() {
   # Run the Server
   ${MODIFIED_NPM_START}
 }
-}
 
 if [ "${SHOULD_INSTALL}" = "true" ]; then
   if [ "$SHOULD_USE_PNPM" = "true" ]; then
