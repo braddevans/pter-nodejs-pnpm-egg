@@ -3,7 +3,7 @@
 # Environment: NodeJS
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM node:14-alpine
+FROM node:18-alpine
 
 MAINTAINER Bradd Evans, <bread@breadhub.co.uk>
 
