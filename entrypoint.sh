@@ -36,12 +36,16 @@ function run_npm() {
 }
 
 function run_server() {
-  NPM_START="pnpm {{NODE_START_FILE}}"
+  NPM_START="npm {{NODE_START_FILE}}"
+  if [ "$SHOULD_USE_PNPM" = "true" ]; then
+    NPM_START="pnpm {{NODE_START_FILE}}"
+  fi
   MODIFIED_NPM_START=$(eval echo $(echo ${NPM_START} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
   echo ":/home/container$ ${MODIFIED_NPM_START}"
 
   # Run the Server
   ${MODIFIED_NPM_START}
+}
 }
 
 if [ "${SHOULD_INSTALL}" = "true" ]; then
