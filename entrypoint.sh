@@ -13,7 +13,7 @@ fi
 node -v
 
 SHOULD_INSTALL=true
-SHOULD_USE_PNPM=true
+SHOULD_USE_PNPM=false
 NPM_COMMAND="i"
 NODE_START_FILE="run server"
 
